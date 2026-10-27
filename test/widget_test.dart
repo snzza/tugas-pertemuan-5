@@ -1,30 +1,42 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:belajar_flutt/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('Profile page renders with fixed experience list', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const MainApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Header, identitas, tombol, dan statistik.
+    expect(find.text('Profil Pengguna'), findsOneWidget);
+    expect(find.text('I Ketut Gunawan, S.Kom, M.T.I.'), findsOneWidget);
+    expect(find.text('Senior Backend Engineer & Dosen'), findsOneWidget);
+    expect(find.text('Edit Profil'), findsOneWidget);
+    expect(find.text('Proyek'), findsOneWidget);
+    expect(find.text('Followers'), findsOneWidget);
+    expect(find.text('Following'), findsOneWidget);
+    expect(find.text('Pengalaman Kerja'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Daftar pengalaman: 4 item terpisah, bukan 3 karena string menyatu.
+    await tester.scrollUntilVisible(
+      find.text('Backend Engineer - Pengembangan Sistem E-money'),
+      100.0,
+    );
+    expect(
+      find.text('Backend Engineer - Pengembangan Sistem E-money'),
+      findsOneWidget,
+    );
+    await tester.scrollUntilVisible(
+      find.text('Lead Developer - Aplikasi Sekurindo'),
+      100.0,
+    );
+    expect(find.text('Lead Developer - Aplikasi Sekurindo'), findsOneWidget);
+    expect(
+      find.text(
+        'Lead Developer - Aplikasi SekurindoBackend Engineer - Pengembangan Sistem E-money',
+      ),
+      findsNothing,
+    );
   });
 }
