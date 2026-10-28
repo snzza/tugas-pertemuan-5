@@ -26,10 +26,10 @@ class ProfilePage extends StatelessWidget {
   final String userName = 'Rico Adi Pratama';
   final String role = 'Mahasiswa Teknik Informatika';
   final List<String> experiences = const [
-    'Senior Backend Engineer - EDC Bank DKI',
-    'Backend & System Architect - Secure Payment EDC',
-    'Lead Developer - Aplikasi Sekurindo',
-    'Backend Engineer - Pengembangan Sistem E-money',
+    'Pengembang Bot Telegram - Menfess @BaseBasis_Bot',
+    'Pengembang Mini App Game - Pulau Kerang',
+    'Pengembang Bot Telegram - Fsubku',
+    'Pengembang Mini App - Burikin Meme',
   ];
 
   @override

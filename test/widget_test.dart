@@ -18,23 +18,23 @@ void main() {
     expect(find.text('Following'), findsOneWidget);
     expect(find.text('Pengalaman Kerja'), findsOneWidget);
 
-    // Daftar pengalaman: 4 item terpisah, bukan 3 karena string menyatu.
+    // Daftar pengalaman: 4 item terpisah, bukan string menyatu.
     await tester.scrollUntilVisible(
-      find.text('Backend Engineer - Pengembangan Sistem E-money'),
+      find.text('Pengembang Mini App - Burikin Meme'),
       100.0,
     );
     expect(
-      find.text('Backend Engineer - Pengembangan Sistem E-money'),
+      find.text('Pengembang Mini App - Burikin Meme'),
       findsOneWidget,
     );
     await tester.scrollUntilVisible(
-      find.text('Lead Developer - Aplikasi Sekurindo'),
+      find.text('Pengembang Bot Telegram - Fsubku'),
       100.0,
     );
-    expect(find.text('Lead Developer - Aplikasi Sekurindo'), findsOneWidget);
+    expect(find.text('Pengembang Bot Telegram - Fsubku'), findsOneWidget);
     expect(
       find.text(
-        'Lead Developer - Aplikasi SekurindoBackend Engineer - Pengembangan Sistem E-money',
+        'Pengembang Bot Telegram - FsubkuPengembang Mini App - Burikin Meme',
       ),
       findsNothing,
     );
