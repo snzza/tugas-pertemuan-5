@@ -10,7 +10,7 @@ void main() {
 
     // Header, identitas, tombol, dan statistik.
     expect(find.text('Profil Pengguna'), findsOneWidget);
-    expect(find.text('I Ketut Gunawan, S.Kom, M.T.I.'), findsOneWidget);
+    expect(find.text('Rico Adi Pratama'), findsOneWidget);
     expect(find.text('Senior Backend Engineer & Dosen'), findsOneWidget);
     expect(find.text('Edit Profil'), findsOneWidget);
     expect(find.text('Proyek'), findsOneWidget);
