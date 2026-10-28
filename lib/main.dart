@@ -24,7 +24,7 @@ class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   final String userName = 'Rico Adi Pratama';
-  final String role = 'Senior Backend Engineer & Dosen';
+  final String role = 'Mahasiswa Teknik Informatika';
   final List<String> experiences = const [
     'Senior Backend Engineer - EDC Bank DKI',
     'Backend & System Architect - Secure Payment EDC',
