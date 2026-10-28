@@ -18,23 +18,23 @@ void main() {
     expect(find.text('Following'), findsOneWidget);
     expect(find.text('Pengalaman Kerja'), findsOneWidget);
 
-    // Daftar pengalaman: 4 item terpisah, bukan string menyatu.
+    // Daftar pengalaman: 4 item placeholder terpisah, bukan string menyatu.
     await tester.scrollUntilVisible(
-      find.text('Pengembang Mini App - Burikin Meme'),
+      find.text('Pengalaman 4'),
       100.0,
     );
     expect(
-      find.text('Pengembang Mini App - Burikin Meme'),
+      find.text('Pengalaman 4'),
       findsOneWidget,
     );
     await tester.scrollUntilVisible(
-      find.text('Pengembang Bot Telegram - Fsubku'),
+      find.text('Pengalaman 3'),
       100.0,
     );
-    expect(find.text('Pengembang Bot Telegram - Fsubku'), findsOneWidget);
+    expect(find.text('Pengalaman 3'), findsOneWidget);
     expect(
       find.text(
-        'Pengembang Bot Telegram - FsubkuPengembang Mini App - Burikin Meme',
+        'Pengalaman 3Pengalaman 4',
       ),
       findsNothing,
     );

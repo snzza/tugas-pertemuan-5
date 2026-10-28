@@ -26,10 +26,10 @@ class ProfilePage extends StatelessWidget {
   final String userName = 'Rico Adi Pratama';
   final String role = 'Mahasiswa Teknik Informatika';
   final List<String> experiences = const [
-    'Pengembang Bot Telegram - Menfess @BaseBasis_Bot',
-    'Pengembang Mini App Game - Pulau Kerang',
-    'Pengembang Bot Telegram - Fsubku',
-    'Pengembang Mini App - Burikin Meme',
+    'Pengalaman 1',
+    'Pengalaman 2',
+    'Pengalaman 3',
+    'Pengalaman 4',
   ];
 
   @override
