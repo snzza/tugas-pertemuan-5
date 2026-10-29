@@ -252,3 +252,26 @@ class MyPages1 extends StatelessWidget {
       );
   }
 }
+
+// Contoh 1.1 dari modul: pohon widget sederhana. Cuplikan modul dibungkus
+// widget class supaya bisa di-compile; isi cuplikan tidak diubah.
+class ContohPohonWidget extends StatelessWidget {
+  const ContohPohonWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          const Text('Katalog Kampus'),
+          Row(
+            children: const [
+              Icon(Icons.school),
+              Text('Fakultas Ilmu Komputer'),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
