@@ -8,13 +8,13 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  String userName = 'Rico Adi Pratama';
-  final String role = 'Mahasiswa Teknik Informatika';
+  String userName = 'I Ketut Gunawan, S.Kom, M.T.I.';
+  final String role = 'Senior Backend Engineer & Dosen';
   final List<String> experiences = const [
-    'Pengalaman 1',
-    'Pengalaman 2',
-    'Pengalaman 3',
-    'Pengalaman 4',
+    'Senior Backend Engineer - EDC Bank DKI',
+    'Backend & System Architect - Secure Payment EDC',
+    'Lead Developer - Aplikasi Sekurindo',
+    'Backend Engineer - Pengembangan Sistem E-money',
   ];
 
   @override
