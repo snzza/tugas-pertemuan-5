@@ -25,6 +25,8 @@ Extract Widget). Kodenya dibagi dua file: `lib/main.dart` dan
 6. Kode dari soal tidak ada import-nya — ditambahin
    `import 'package:flutter/material.dart';` di awal file biar bisa
    di-compile.
+7. `MyPages()` di contoh modul tidak didefinisikan — LayoutRulesExample
+   di repo ini memakai `MyPages1`.
 
 ## Jalanin
 
