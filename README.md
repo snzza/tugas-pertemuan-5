@@ -2,18 +2,17 @@
 
 Aplikasi halaman profil dari materi KB1185 (layout, komposisi widget, dan
 Extract Widget). Kode dari materi diperbaiki dari bug yang sengaja disisipkan,
-lalu di-refactor menjadi widget reusable. Seluruh kode berada di satu file,
-`lib/main.dart`.
+lalu di-refactor menjadi widget reusable. Kode dibagi menjadi dua file
+sesuai materi: `lib/main.dart` dan `lib/profile_page.dart`.
 
-Data profil memakai data sendiri (nama, jabatan, dan daftar pengalaman
-placeholder), bukan data contoh di materi.
+Data profil diambil dari contoh kode materi.
 
 ## Struktur
 
-- `lib/main.dart` — `MainApp`, `ProfilePage`, `ProfileAvatar`, `ProfileInfo`,
-  `ProfileStats`, `StatItem`, `ExperienceCard`, `LayoutRulesExample`,
-  `MyPages1`, `MyPages2`, `MyPages3`, `ContohPohonWidget`, dan
-  `PercobaanAturan3`
+- `lib/main.dart` — `MainApp`, `LayoutRulesExample`, `MyPages1`, `MyPages2`,
+  `MyPages3`, `ContohPohonWidget`, dan `PercobaanAturan3`
+- `lib/profile_page.dart` — `ProfilePage`, `ProfileAvatar`, `ProfileInfo`,
+  `ProfileStats`, `StatItem`, dan `ExperienceCard`
 - `test/widget_test.dart` — smoke test halaman profil
 
 ## Perbaikan dari kode materi
@@ -57,6 +56,12 @@ placeholder), bukan data contoh di materi.
    (terisi nama saat ini); tombol Simpan memperbarui `userName` lewat
    `setState()` sehingga nama di layar utama berubah, tombol Batal
    membatalkan, dan nama kosong diabaikan.
+10. **Penyesuaian penuh ke soal (2026-11-02).** Atas perintah untuk
+    mengikuti soal, bukan perintah sebelumnya: `ProfilePage` dan widget
+    profil dipisah ke `profile_page.dart` (soal: dua file), dan data
+    profil dikembalikan ke contoh materi (nama, jabatan, 4 pengalaman
+    backend). Pesan commit lama yang sudah push tidak diubah — mengubahnya
+    butuh rewrite history.
 
 ## Verifikasi
 
