@@ -231,18 +231,18 @@ class MyPages1 extends StatelessWidget {
                 // INDUK memberikan constraints ke bawah (Constraints turun)
                 constraints: const BoxConstraints(
                   minWidth: 100,
-                  maxWidth: 1000,
+                  maxWidth: 200,
                   minHeight: 100,
-                  maxHeight: 1000,
+                  maxHeight: 200,
                 ),
                 // ANAK mencoba menentukan ukuran (Ukuran naik)
                 child: Container(
                   width: 500, // Mencoba lebih besar dari maxWidth (Gagal, dipaksa 200)
                   height: 50, // Mencoba lebih kecil dari minHeight (Gagal, dipaksa 100)
-                  color: const Color.fromARGB(255, 243, 33, 33),
+                  color: Colors.blue,
                   child: const Text(
-                    'yo ndak tau kok tanya saya',
-                    style: TextStyle(color: Colors.white, fontSize: 20.0) ,
+                    'Saya minta 500x50, tapi dapatnya 200x100',
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
