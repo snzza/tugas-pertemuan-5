@@ -55,12 +55,33 @@ class _ProfilePageState extends State<ProfilePage> {
             ProfileInfo(name: userName, role: role),
             const SizedBox(height: 24),
             ElevatedButton.icon(
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Fitur edit belum aktif pada modul statis.'),
+              onPressed: () async {
+                final controller = TextEditingController(text: userName);
+                final result = await showDialog<String>(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    title: const Text('Edit Profil'),
+                    content: TextFormField(
+                      controller: controller,
+                      decoration: const InputDecoration(labelText: 'Nama'),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('Batal'),
+                      ),
+                      TextButton(
+                        onPressed: () =>
+                            Navigator.pop(context, controller.text.trim()),
+                        child: const Text('Simpan'),
+                      ),
+                    ],
                   ),
                 );
+                controller.dispose();
+                if (result != null && result.isNotEmpty) {
+                  setState(() => userName = result);
+                }
               },
               icon: const Icon(Icons.edit),
               label: const Text('Edit Profil'),
