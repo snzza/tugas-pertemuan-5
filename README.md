@@ -22,6 +22,9 @@ Extract Widget). Kodenya dibagi dua file: `lib/main.dart` dan
    `SizedBox(width: 24)`.
 4. `StatItem(count: 42)` int dikirim ke parameter String — jadi `'42'`.
 5. ListView langsung di Column error — dibungkus `Expanded`.
+6. Kode dari soal tidak ada import-nya — ditambahin
+   `import 'package:flutter/material.dart';` di awal file biar bisa
+   di-compile.
 
 ## Jalanin
 
