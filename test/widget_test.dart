@@ -10,34 +10,31 @@ void main() {
 
     // Header, identitas, tombol, dan statistik.
     expect(find.text('Profil Pengguna'), findsOneWidget);
-    expect(find.text('I Ketut Gunawan, S.Kom, M.T.I.'), findsOneWidget);
-    expect(find.text('Senior Backend Engineer & Dosen'), findsOneWidget);
+    expect(find.text('Rico Adi Pratama'), findsOneWidget);
+    expect(find.text('Mahasiswa Teknik Informatika'), findsOneWidget);
     expect(find.text('Edit Profil'), findsOneWidget);
     expect(find.text('Proyek'), findsOneWidget);
     expect(find.text('Followers'), findsOneWidget);
     expect(find.text('Following'), findsOneWidget);
     expect(find.text('Pengalaman Kerja'), findsOneWidget);
 
-    // Daftar pengalaman: 4 item terpisah, bukan string menyatu.
+    // Daftar pengalaman: 4 item placeholder terpisah, bukan string menyatu.
     await tester.scrollUntilVisible(
-      find.text('Backend Engineer - Pengembangan Sistem E-money'),
+      find.text('Pengalaman 4'),
       100.0,
     );
     expect(
-      find.text('Backend Engineer - Pengembangan Sistem E-money'),
+      find.text('Pengalaman 4'),
       findsOneWidget,
     );
     await tester.scrollUntilVisible(
-      find.text('Backend & System Architect - Secure Payment EDC'),
+      find.text('Pengalaman 3'),
       100.0,
     );
-    expect(
-      find.text('Backend & System Architect - Secure Payment EDC'),
-      findsOneWidget,
-    );
+    expect(find.text('Pengalaman 3'), findsOneWidget);
     expect(
       find.text(
-        'Lead Developer - Aplikasi SekurindoBackend Engineer - Pengembangan Sistem E-money',
+        'Pengalaman 3Pengalaman 4',
       ),
       findsNothing,
     );
