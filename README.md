@@ -48,9 +48,15 @@ placeholder), bukan data contoh di materi.
    `Center` di-comment sehingga Container induk meneruskan tight constraints
    200x200 langsung ke anak, dan kotak merah yang minta 80x80 dipaksa
    memenuhi 200x200.
-8. **Tombol Edit Profil memakai versi statis dari modul** (`SnackBar`
+8. **Tombol Edit Profil awalnya memakai versi statis dari modul** (`SnackBar`
    `'Fitur edit belum aktif pada modul statis.'`), sesuai blok kode final
-   materi.
+   materi. Versi ini digantikan oleh poin 9.
+9. **Hari 4 lanjutan: dialog edit profil.** `ProfilePage` diubah dari
+   `StatelessWidget` menjadi `StatefulWidget` dengan `userName` di state
+   class. Tombol Edit Profil membuka dialog berisi `TextFormField`
+   (terisi nama saat ini); tombol Simpan memperbarui `userName` lewat
+   `setState()` sehingga nama di layar utama berubah, tombol Batal
+   membatalkan, dan nama kosong diabaikan.
 
 ## Verifikasi
 
