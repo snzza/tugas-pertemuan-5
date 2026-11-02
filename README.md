@@ -5,13 +5,15 @@ Extract Widget). Kode dari materi diperbaiki dari bug yang sengaja disisipkan,
 lalu di-refactor menjadi widget reusable. Seluruh kode berada di satu file,
 `lib/main.dart`.
 
-Data profil (nama, jabatan, dan daftar pengalaman) diambil dari contoh kode
-materi.
+Data profil memakai data sendiri (nama, jabatan, dan daftar pengalaman
+placeholder), bukan data contoh di materi.
 
 ## Struktur
 
 - `lib/main.dart` — `MainApp`, `ProfilePage`, `ProfileAvatar`, `ProfileInfo`,
-  `ProfileStats`, `StatItem`, dan `ExperienceCard`
+  `ProfileStats`, `StatItem`, `ExperienceCard`, `LayoutRulesExample`,
+  `MyPages1`, `MyPages2`, `MyPages3`, `ContohPohonWidget`, dan
+  `PercobaanAturan3`
 - `test/widget_test.dart` — smoke test halaman profil
 
 ## Perbaikan dari kode materi
@@ -33,6 +35,22 @@ materi.
    dalam `Column` tanpa pembungkus, sehingga mendapat tinggi tak terbatas dan
    menimbulkan runtime error. Dibungkus dengan `Expanded` agar mengisi sisa
    ruang yang tersedia dan bisa di-scroll.
+
+## Penyesuaian ke soal (2026-11-02)
+
+6. **`MyPages1` dikembalikan ke contoh modul.** Sebelumnya constraints diubah
+   menjadi maks 1000x1000, kotak menjadi merah, dan teks menjadi lelucon,
+   sehingga demo aturan constraints/size tidak lagi terbukti (hasilnya
+   500x100, bukan 200x100) dan bertentangan dengan teks penjelasan di
+   atasnya. Dikembalikan persis ke modul: constraints maks 200x200, kotak
+   biru, teks `'Saya minta 500x50, tapi dapatnya 200x100'`.
+7. **`PercobaanAturan3` ditambahkan.** Eksperimen dari modul yang belum ada:
+   `Center` di-comment sehingga Container induk meneruskan tight constraints
+   200x200 langsung ke anak, dan kotak merah yang minta 80x80 dipaksa
+   memenuhi 200x200.
+8. **Tombol Edit Profil memakai versi statis dari modul** (`SnackBar`
+   `'Fitur edit belum aktif pada modul statis.'`), sesuai blok kode final
+   materi.
 
 ## Verifikasi
 
