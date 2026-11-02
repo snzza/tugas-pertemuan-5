@@ -22,9 +22,6 @@ Extract Widget). Kodenya dibagi dua file: `lib/main.dart` dan
    `SizedBox(width: 24)`.
 4. `StatItem(count: 42)` int dikirim ke parameter String — jadi `'42'`.
 5. ListView langsung di Column error — dibungkus `Expanded`.
-6. MyPages1 dibalikin ke contoh modul (constraints maks 200, kotak biru).
-7. Tombol Edit Profil sekarang buka dialog edit nama (StatefulWidget +
-   setState), bukan SnackBar lagi.
 
 ## Jalanin
 
