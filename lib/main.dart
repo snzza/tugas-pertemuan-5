@@ -381,3 +381,28 @@ class MyPages3 extends StatelessWidget {
     );
   }
 }
+
+// Percobaan Aturan 3 dari modul: Center di-comment sehingga Container
+// induk meneruskan tight constraints 200x200 langsung ke anak; kotak
+// merah yang minta 80x80 dipaksa memenuhi 200x200 dan menutupi induk.
+class PercobaanAturan3 extends StatelessWidget {
+  const PercobaanAturan3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      color: Colors.grey[300], // Induk yang memiliki ruang
+      // Induk yang menentukan posisi
+      //child: Center(
+      child: Container(
+        width: 80,
+        height: 80,
+        color: Colors.red,
+        child: const Text('Center', style: TextStyle(color: Colors.white)),
+      ),
+      //),
+    );
+  }
+}
